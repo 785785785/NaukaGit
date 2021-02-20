@@ -1,0 +1,58 @@
+body{color: turquoise;}
+.parent{
+    width: 400px;
+    height: 400px;
+    background-color: blue;
+}
+.child{
+    width: 200px;
+    height: 200px;
+    background-color:red;
+    transition: transform 3s ease-in-out; 
+       }  
+
+    .parent:hover {
+        background-color: green;
+    }
+
+    .parent:hover.child {
+        background-color: green;
+    }  
+    .parent:hover.child { 
+        transform: translateX(40%);
+        background-color: green;
+    }
+    .parent:hover .child {
+        animation: left-to-right 10s ease-in;
+      }
+      
+    
+      
+    @keyframes left-to-right { 100% {
+    transform: translateX(100%);
+    background-color: green;
+        }
+    }
+
+    .parent:hover.child{animation:nazwaAnimacji 1s ease-in forwards infinite alternate;}
+
+    @keyframes nazwaAnimacji{
+        0%
+        {transform:translateX(0);
+        background-color:black;}
+        33% {
+        transform:translateY(100%)
+    }
+    66%{
+        transform:translateX(100%) translateY(100%);
+        background-color:black;
+    }
+    100%{
+        transform: translateX(100%);
+        background-color: black;
+    }
+    }
+
+    
+
+
